@@ -26,11 +26,11 @@ function render() {
   main.innerHTML = ""
   fakele.forEach(function (rowArr) {
     let row = document.createElement("div")
+    let rowContent = "";
     rowArr.forEach(function (square) {
-      let spanSq = document.createElement("span")
-      spanSq.innerHTML = square;
-      row.appendChild(spanSq);
+        rowContent += square
     });
+    row.innerHTML = rowContent;
     main.appendChild(row);
   });
 }
