@@ -1,0 +1,35 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+}
+
+.instructions {
+    width: 110px;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+#fakele {
+    min-height: 150px;
+    background-color: grey;
+    border: black;
+    border-style: solid;
+    border-width: 2px;
+    width: 110px;
+}
+
+#fakele span {
+    margin: 0;
+    padding: 0;
+    height: 18px;
+    width:18px;
+}
+#fakele div {
+    margin: 0;
+    padding: 0;
+    height: 18px;
+}
