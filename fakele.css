@@ -59,3 +59,33 @@ header, footer {
     margin-top: 1rem;
     border-radius: 5%;
 }
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    header, footer {
+        height: 10vw;
+        font-size: 1.8rem;
+    }
+    
+    #fakele {
+        min-height: 80vw;
+        height: 80vw;
+    }
+
+    #fakele > div {
+        font-size: 5rem;
+    }
+
+    .container {
+        height: 100vw;
+        max-width: 80%;
+        width: 80%;
+    }
+
+    .instructions button {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+}
