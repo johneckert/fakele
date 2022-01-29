@@ -34,11 +34,7 @@ function copyFakele() {
   })
   let clipboardText = 'Fakele ' + randomNum + " " + tries + " / 6 \n";
   let clipboard =  clipboardText + clipboardPuzzle
-  navigator.clipboard.writeText(clipboard).then(function() {
-    console.log(clipboard);
-}, function() {
-  /* clipboard write failed */
-});
+  navigator.clipboard.writeText(clipboard)
 }
 
 function render() {
