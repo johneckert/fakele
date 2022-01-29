@@ -19,6 +19,28 @@ function generateFakele() {
   }
 }
 
+function copyFakele() {
+  let fakele = document.getElementById("fakele").innerHTML;
+  let fakeleArr = fakele.split("<div>");
+  let randomNum = Math.floor(Math.random() * 500);
+  let tries = 0
+  let clipboardPuzzle = ""
+  fakeleArr.forEach(function (line) {
+    let cleanLine = line.split("</div>")[0];
+    if (cleanLine.length > 0) {
+      tries += 1;
+      clipboardPuzzle += cleanLine + "\n";
+    }
+  })
+  let clipboardText = 'Fakele ' + randomNum + " " + tries + " / 6 \n";
+  let clipboard =  clipboardText + clipboardPuzzle
+  navigator.clipboard.writeText(clipboard).then(function() {
+    console.log(clipboard);
+}, function() {
+  /* clipboard write failed */
+});
+}
+
 function render() {
 
   let fakele = generateFakele();
